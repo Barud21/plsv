@@ -1,10 +1,15 @@
 "use strict";
 
-const btnPickUp = document.querySelector(".btn--pick-up");
+const btnStart = document.getElementById("btn-start");
+const btnPickUp = document.getElementById("btn-pick-up");
 const phoneNumber = document.getElementById("phone-number");
+const form = document.querySelector(".form");
 
-btnPickUp.addEventListener("click", () => {
+btnStart.addEventListener("click", () => {
   console.log("Kliknięto przycisk");
+  form.classList.remove("hidden");
+  btnPickUp.classList.remove("hidden");
+  btnStart.classList.add("hidden");
 });
 
 phoneNumber.addEventListener("keydown", function (e) {
