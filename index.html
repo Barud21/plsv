@@ -17,7 +17,10 @@
       </p>
     </header>
 
-    <form class="form hidden">
+    <form
+      class="form hidden"
+      onsubmit="event.preventDefault(); validateMyForm();"
+    >
       <div class="form__container">
         <div>
           <label class="form__label" for="phone-number">Numer telefonu</label>
@@ -50,14 +53,31 @@
       </div>
       <input
         id="btn-pick-up"
-        class="btn hidden"
+        class="btn btn--pick-up hidden"
         type="submit"
         value="Odbierz paczkę"
       />
     </form>
 
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Paczka odebrana</h1>
+      <p class="modal__text">
+        Zrobiłeś to w czasie 10 sekund! <br />
+        Czy możemy zrobić dla Ciebie cos jeszcze?
+      </p>
+      <div class="modal__buttons">
+        <button id="btn-end" class="modal__btn">To wszystko na dziś</button>
+        <button id="btn-next-parcel" class="modal__btn">
+          Odbierz kolejną paczkę
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+
     <div>
-      <button id="btn-start" class="btn">Odbiór paczki</button>
+      <button id="btn-start" class="btn btn--start">Odbiór paczki</button>
     </div>
 
     <footer></footer>
