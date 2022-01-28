@@ -47,7 +47,7 @@ header {
 
 .form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 75px;
   padding: 1vh 0 5vh 0;
@@ -60,7 +60,10 @@ header {
 .form__container {
   display: flex;
   width: 50%;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: centers;
+  justify-content: center;
+  gap: 75px;
 }
 
 .form__container__input {
