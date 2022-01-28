@@ -16,6 +16,36 @@
         Rozpocznij klikając w przycisk.
       </p>
     </header>
+    <div class="form">
+      <form class="form__container">
+        <label class="form__label" for="phone-number">Numer telefonu</label>
+        <input
+          class="form__container__input"
+          id="phone-number"
+          type="patern"
+          name="phone-number"
+          placeholder="123 456 789"
+          pattern="[\d]{3} [\d]{3} [\d]{3}"
+          minlength="11"
+          maxlength="11"
+          required
+        />
+      </form>
+      <form class="form__container">
+        <label class="form__label" for="code">Numer odbioru</label>
+        <input
+          class="form__container__input"
+          id="code"
+          type="tel"
+          name="code"
+          placeholder="1234"
+          pattern="[0-9]{4}"
+          minlength="4"
+          maxlength="4"
+          required
+        />
+      </form>
+    </div>
 
     <div>
       <button class="btn btn--pick-up">Odbierz paczkę</button>
