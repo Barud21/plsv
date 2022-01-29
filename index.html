@@ -17,24 +17,23 @@
       </p>
     </header>
 
-    <form
-      class="form hidden"
-      onsubmit="event.preventDefault(); validateMyForm();"
-    >
+    <form class="form hidden" onsubmit="event.preventDefault();">
       <div class="form__container">
         <div>
           <label class="form__label" for="phone-number">Numer telefonu</label>
           <input
             class="form__container__input"
             id="phone-number"
-            type="patern"
+            type="pattern"
             name="phone-number"
             placeholder="123 456 789"
             pattern="[\d]{3} [\d]{3} [\d]{3}"
+            aria-required="true"
             minlength="11"
             maxlength="11"
             required
           />
+          <p class="form__msg" id="phone-msg">Wypełnij to pole.</p>
         </div>
         <div>
           <label class="form__label" for="code">Numer odbioru</label>
@@ -45,17 +44,21 @@
             name="code"
             placeholder="1234"
             pattern="[\d]{4}"
+            aria-required="true"
             minlength="4"
             maxlength="4"
             required
           />
+          <p class="form__msg" id="code-msg">Wypełnij to pole.</p>
         </div>
       </div>
       <input
         id="btn-pick-up"
-        class="btn btn--pick-up hidden"
+        class="btn btn--pick-up btn--inactive hidden"
         type="submit"
         value="Odbierz paczkę"
+        aria-disabled="false"
+        disabled
       />
     </form>
 
