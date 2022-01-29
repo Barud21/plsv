@@ -51,9 +51,6 @@ header {
   background-color: grey;
 }
 
-.btn--pick-up {
-}
-
 .form {
   display: flex;
   flex-direction: column;
