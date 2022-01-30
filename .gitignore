@@ -127,3 +127,6 @@ npm-debug.log
 # Docker
 Dockerfile
 docker-compose.yml
+
+# Code coverage with tests
+coverage
