@@ -1,5 +1,6 @@
 "use strict";
 
+import { numberValidation } from "./numberValidation.js";
 import {
   showPhoneMsg,
   hidePhoneMsg,
@@ -10,9 +11,9 @@ import {
 } from "./domManipulation.js";
 
 const phoneValidation = function (phoneNumber) {
-  const number = phoneNumber.value;
-  let isPhoneNumber = /^\d+$/.test(number.replaceAll(" ", ""));
-  if (phoneNumber.value.length === 11 && isPhoneNumber) {
+  const number = phoneNumber.value.replaceAll(" ", "");
+
+  if (numberValidation(number, 9)) {
     hidePhoneMsg();
     return true;
   } else {
@@ -22,9 +23,9 @@ const phoneValidation = function (phoneNumber) {
 };
 
 const codeValidation = function (code) {
-  const pickUpCode = code.value;
-  let isPickUpCode = /^\d+$/.test(pickUpCode.replaceAll(" ", ""));
-  if (code.value.length === 4 && isPickUpCode) {
+  const pickUpCode = code.value.replaceAll(" ", "");
+
+  if (numberValidation(pickUpCode, 4)) {
     hideCodeMsg();
     return true;
   } else {
