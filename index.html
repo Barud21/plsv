@@ -13,80 +13,83 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1 class="company">ENVELO</h1>
-      <p class="description">
-        Możesz mieć swoją przesyłkę w kilkanaście sekund.<br />
-        Rozpocznij klikając w przycisk.
-      </p>
-    </header>
+    <div class="screen-view">
+      <header>
+        <button class="btn-back hidden">&times;</button>
+        <h1 class="company">ENVELO</h1>
+        <p class="description">
+          Możesz mieć swoją przesyłkę w kilkanaście sekund.<br />
+          Rozpocznij klikając w przycisk.
+        </p>
+      </header>
 
-    <form class="form hidden" onsubmit="event.preventDefault();">
-      <div class="form__container">
-        <div>
-          <label class="form__label" for="phone-number">Numer telefonu</label>
-          <input
-            class="form__container__input"
-            id="phone-number"
-            type="pattern"
-            name="phone-number"
-            placeholder="123 456 789"
-            pattern="[\d]{3} [\d]{3} [\d]{3}"
-            aria-required="true"
-            minlength="11"
-            maxlength="11"
-            required
-          />
-          <p class="form__msg" id="phone-msg">Wypełnij to pole.</p>
+      <form class="form hidden" onsubmit="event.preventDefault();">
+        <div class="form__container">
+          <div>
+            <label class="form__label" for="phone-number">Numer telefonu</label>
+            <input
+              class="form__container__input"
+              id="phone-number"
+              type="pattern"
+              name="phone-number"
+              placeholder="123 456 789"
+              pattern="[\d]{3} [\d]{3} [\d]{3}"
+              aria-required="true"
+              minlength="11"
+              maxlength="11"
+              required
+            />
+            <p class="form__msg" id="phone-msg">Wypełnij to pole.</p>
+          </div>
+          <div>
+            <label class="form__label" for="code">Numer odbioru</label>
+            <input
+              class="form__container__input"
+              id="code"
+              type="pattern"
+              name="code"
+              placeholder="1234"
+              pattern="[\d]{4}"
+              aria-required="true"
+              minlength="4"
+              maxlength="4"
+              required
+            />
+            <p class="form__msg" id="code-msg">Wypełnij to pole.</p>
+          </div>
         </div>
-        <div>
-          <label class="form__label" for="code">Numer odbioru</label>
-          <input
-            class="form__container__input"
-            id="code"
-            type="pattern"
-            name="code"
-            placeholder="1234"
-            pattern="[\d]{4}"
-            aria-required="true"
-            minlength="4"
-            maxlength="4"
-            required
-          />
-          <p class="form__msg" id="code-msg">Wypełnij to pole.</p>
-        </div>
-      </div>
-      <button
-        id="btn-pick-up"
-        class="btn btn--pick-up btn--inactive hidden"
-        type="submit"
-        value="Odbierz paczkę"
-        aria-disabled="false"
-        disabled
-      >
-        <i id="btn-loading" class="fa fa-spinner fa-spin hidden"></i> Odbierz
-        paczkę
-      </button>
-    </form>
-
-    <div class="modal hidden">
-      <h1>Paczka odebrana!</h1>
-      <p class="modal__text">
-        Zrobiłeś to w czasie 10 sekund! <br />
-        Czy możemy zrobić dla Ciebie coś jeszcze?
-      </p>
-      <div class="modal__buttons">
-        <button id="btn-end" class="modal__btn">To wszystko na dziś</button>
-        <button id="btn-next-parcel" class="modal__btn">
-          Odbierz kolejną paczkę
+        <button
+          id="btn-pick-up"
+          class="btn btn--pick-up btn--inactive hidden"
+          type="submit"
+          value="Odbierz paczkę"
+          aria-disabled="false"
+          disabled
+        >
+          <i id="btn-loading" class="fa fa-spinner fa-spin hidden"></i> Odbierz
+          paczkę
         </button>
+      </form>
+
+      <div class="modal hidden">
+        <h1>Paczka odebrana!</h1>
+        <p class="modal__text">
+          Zrobiłeś to w czasie 10 sekund! <br />
+          Czy możemy zrobić dla Ciebie coś jeszcze?
+        </p>
+        <div class="modal__buttons">
+          <button id="btn-end" class="modal__btn">To wszystko na dziś</button>
+          <button id="btn-next-parcel" class="modal__btn">
+            Odbierz kolejną paczkę
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div class="overlay hidden"></div>
+      <div class="overlay hidden"></div>
 
-    <div>
-      <button id="btn-start" class="btn btn--start">Odbiór paczki</button>
+      <div>
+        <button id="btn-start" class="btn btn--start">Odbiór paczki</button>
+      </div>
     </div>
 
     <footer></footer>
