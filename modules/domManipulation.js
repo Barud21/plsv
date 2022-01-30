@@ -11,21 +11,22 @@ const btnPickUp = document.getElementById("btn-pick-up");
 const btnEnd = document.getElementById("btn-end");
 const btnNextParcel = document.getElementById("btn-next-parcel");
 const btnLoading = document.getElementById("btn-loading");
+const btnBack = document.querySelector(".btn-back");
 
 const showPhoneMsg = function () {
-  phoneNumberMsg.classList.remove("hidden");
+  phoneNumberMsg.classList.remove("form__msg--opacity");
 };
 
 const hidePhoneMsg = function () {
-  phoneNumberMsg.classList.add("hidden");
+  phoneNumberMsg.classList.add("form__msg--opacity");
 };
 
 const showCodeMsg = function () {
-  codeMsg.classList.remove("hidden");
+  codeMsg.classList.remove("form__msg--opacity");
 };
 
 const hideCodeMsg = function () {
-  codeMsg.classList.add("hidden");
+  codeMsg.classList.add("form__msg--opacity");
 };
 
 const showLoading = function () {
@@ -50,6 +51,7 @@ const endPickUp = function () {
   form.classList.add("hidden");
   btnPickUp.classList.add("hidden");
   btnStart.classList.remove("hidden");
+  btnBack.classList.add("hidden");
   showCodeMsg();
   showPhoneMsg();
   disablePickUp();
@@ -70,6 +72,7 @@ btnStart.addEventListener("click", () => {
   form.classList.remove("hidden");
   btnPickUp.classList.remove("hidden");
   btnStart.classList.add("hidden");
+  btnBack.classList.remove("hidden");
 });
 
 phoneNumber.addEventListener("input", function (e) {
@@ -107,6 +110,8 @@ btnPickUp.addEventListener("click", () => {
     openModal(), hideLoading();
   }, 2000);
 });
+
+btnBack.addEventListener("click", endPickUp);
 
 btnNextParcel.addEventListener("click", nextParcel);
 btnEnd.addEventListener("click", endPickUp);
