@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="robots" content="noindex" />
     <title>PLSV</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -52,14 +56,17 @@
           <p class="form__msg" id="code-msg">Wypełnij to pole.</p>
         </div>
       </div>
-      <input
+      <button
         id="btn-pick-up"
         class="btn btn--pick-up btn--inactive hidden"
         type="submit"
         value="Odbierz paczkę"
         aria-disabled="false"
         disabled
-      />
+      >
+        <i id="btn-loading" class="fa fa-spinner fa-spin hidden"></i> Odbierz
+        paczkę
+      </button>
     </form>
 
     <div class="modal hidden">
