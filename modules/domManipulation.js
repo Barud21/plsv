@@ -10,6 +10,7 @@ const btnStart = document.getElementById("btn-start");
 const btnPickUp = document.getElementById("btn-pick-up");
 const btnEnd = document.getElementById("btn-end");
 const btnNextParcel = document.getElementById("btn-next-parcel");
+const btnLoading = document.getElementById("btn-loading");
 
 const showPhoneMsg = function () {
   phoneNumberMsg.classList.remove("hidden");
@@ -25,6 +26,14 @@ const showCodeMsg = function () {
 
 const hideCodeMsg = function () {
   codeMsg.classList.add("hidden");
+};
+
+const showLoading = function () {
+  btnLoading.classList.remove("hidden");
+};
+
+const hideLoading = function () {
+  btnLoading.classList.add("hidden");
 };
 
 const nextParcel = function () {
@@ -93,7 +102,10 @@ codeInput.addEventListener("input", function (e) {
 });
 
 btnPickUp.addEventListener("click", () => {
-  openModal();
+  showLoading();
+  setTimeout(() => {
+    openModal(), hideLoading();
+  }, 2000);
 });
 
 btnNextParcel.addEventListener("click", nextParcel);
