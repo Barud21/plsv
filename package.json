@@ -1,0 +1,34 @@
+{
+  "name": "plsv",
+  "version": "1.0.0",
+  "description": "Parcel Locker Screen View",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barud21/plsv.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "parcel-locker",
+    "screen-view"
+  ],
+  "author": "BR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barud21/plsv/issues"
+  },
+  "homepage": "https://github.com/Barud21/plsv#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.4.6"
+  }
+}
